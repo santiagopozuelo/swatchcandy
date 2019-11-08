@@ -3,18 +3,22 @@ import 'home_page.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'record.dart';
 import 'product_page.dart';
+import 'package:url_launcher/url_launcher.dart';
 //import '';
 
 class SearchPage extends StatelessWidget {
   static String tag = 'search-page';
   //Set<String> subSet = new HashSet<String>();
-  
 
 
   Widget _buildList(BuildContext context, DocumentSnapshot document) {
-    final record = Record.fromSnapshot(document);
+    final record = new Record(document);
     //print(record);
     return ListTile(
+
+      leading: CircleAvatar(
+        child: new Image.network(document['product_img_url']),
+      ),
       title: Text(document['product_name']),
       subtitle: Text(document['product_brand']),
       //onTap:() {Navigator.of(context).pushNamed(ProductPage.tag)},
@@ -34,7 +38,7 @@ class SearchPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: new AppBar(
-          title: new Text("Datos"),
+          title: new Text("Products"),
           actions: <Widget>[
             new IconButton(
                 icon: new Icon(Icons.home),

@@ -5,6 +5,10 @@ import 'about_page.dart';
 import 'search_page.dart';
 import 'product_page.dart';
 import 'main_page.dart';
+import 'forgot_password.dart';
+import 'login_page.dart';
+import 'sign_up.dart';
+import 'swatch_shade.dart';
 
 void main() => runApp(MyApp());
 
@@ -16,6 +20,10 @@ class MyApp extends StatelessWidget {
     'SearchPage': (context) => SearchPage(),
     'ProductPage': (context) => ProductPage(),
     'MainPage' : (context) => MainPage(),
+    'ForgotPass' : (context) => ForgotPass(),
+    'LoginPage' : (context) => LoginPage(),
+    'SignUp' : (context) => SignUp(),
+    //'SwatchShade' : (context) => SwatchShade(),
 
     //HomePage.tag: (context) => HomePage()
 

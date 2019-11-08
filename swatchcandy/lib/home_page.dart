@@ -27,7 +27,7 @@ class HomePage extends StatelessWidget {
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(24),
         ),
-        onPressed:() {Navigator.pushNamed(context, 'MainPage');},
+        onPressed:() { Navigator.pushNamed(context, 'LoginPage');},
         padding: EdgeInsets.all(12),
         color: Colors.lightBlueAccent,
         child: Text('Enter', style: TextStyle(color: Colors.white)),
